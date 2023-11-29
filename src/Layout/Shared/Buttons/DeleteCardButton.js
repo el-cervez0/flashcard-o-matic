@@ -9,7 +9,15 @@ function DeleteCardButton({ cardId }) {
         window.location.reload();
     } 
 
-    return <button onClick={handleDelete}>Delete</button>
+    return (
+        <button
+            onClick={handleDelete}
+            className="btn btn-danger"
+            style={{ float: 'right', marginRight: '25px'}}
+            >
+            Delete
+        </button>
+    );
 }
 
 export default DeleteCardButton;

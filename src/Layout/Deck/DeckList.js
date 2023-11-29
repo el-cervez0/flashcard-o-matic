@@ -21,16 +21,17 @@ const deckListStyle = {
 
 function DeckList({ decks }) {
     return (
+        <div style={{ padding: '10px' }} className="panel-body">
         <ul>      
             {decks.map((deck, index) => (
                 <div className="deck-info" style={deckListStyle}>    
                     <li key={index} style={deckBoxStyle}>
-                        <h3>{deck.name}</h3>
-                        <small>{deck.cards.length} cards</small>
-                        <p>{deck.description}</p>
+                            <h3>{deck.name}</h3>
+                            <small style={{ marginTop: '0px'}}>{deck.cards.length} cards</small>
+                        <p style={{ marginTop: '15px', marginBottom: '25px'}}>{deck.description}</p>
                         <div className="deck-actions">
-                            <button>
-                                <Link to={`/decks/${deck.id}`}>View</Link>
+                            <button className="btn btn-primary">
+                                <Link style={{ color: '#FFF' }} to={`/decks/${deck.id}`}>View</Link>
                             </button>
                             <StudyButton deckId={deck.id} />
                             <DeleteDeckButton deckId={deck.id} />
@@ -38,7 +39,8 @@ function DeckList({ decks }) {
                     </li>
                 </div>
             ))}
-        </ul>
+            </ul>
+        </div>
     )
 }
 

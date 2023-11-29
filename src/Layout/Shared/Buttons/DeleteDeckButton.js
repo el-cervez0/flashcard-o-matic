@@ -8,7 +8,12 @@ function DeleteDeckButton({ deckId }) {
         await deleteDeck(deckId);
         window.location.reload();
     }
-    return <button onClick={handleDelete}>Delete</button>
+    return <button
+        className="btn btn-danger"
+        style={{ float: 'right', marginRight: '50px' }}
+        onClick={handleDelete}>
+        Delete
+    </button>
 }
 
 export default DeleteDeckButton;

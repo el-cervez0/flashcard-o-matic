@@ -5,8 +5,8 @@ function EditDeckButton() {
     const deckId = useParams().deckId;
 
     return (
-        <button type="button" name="edit-deck" >
-            <Link to={`${deckId}/edit`}>Edit</Link>
+        <button type="button" name="edit-deck" className="btn btn-primary">
+            <Link to={`${deckId}/edit`} style={{ color: '#FFF'}}>Edit</Link>
         </button>
     )
 }

@@ -21,6 +21,7 @@ function StudyView() {
         return (
             <div>
                 <h1>{deck.name}</h1>
+                <p>{deck.description}</p>
                 {deck.cards.length < 3 ?
                     <NotEnoughCards deckId={deckId} /> :
                     <div className="card">

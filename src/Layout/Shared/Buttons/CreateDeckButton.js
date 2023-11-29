@@ -3,8 +3,8 @@ import {Link } from "react-router-dom";
 
 function CreateDeckButton() {
     return (
-        <button type="button">
-            <Link to="/decks/new">Create New Deck</Link>
+        <button type="button" className="btn btn-primary" style={{ margin: '25px'}} >
+            <Link style={{ color: '#FFF' }} to="/decks/new">Create New Deck +</Link>
         </button>
     )
 }

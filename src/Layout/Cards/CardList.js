@@ -23,13 +23,14 @@ const deckListStyle = {
 function CardList({ deck }) {
     return (
         <div>
-            <h2>{deck.name}</h2>
+            <h1>{deck.name}</h1>
             <p>{deck.description}</p>
             {/* Relace these buttons with the appropriate button bar */}
             <EditDeckButton />
             <StudyButton deckId={deck.id} />
             <AddCardButton deckId={deck.id} />
             <br />
+            <div style={{ padding: '10px', marginTop: '25px'}}>
             <h2>Cards</h2>
             <ul>
             {deck.cards.map((card) => (
@@ -43,6 +44,7 @@ function CardList({ deck }) {
                 </div>
             ))}
             </ul>
+            </div>
         </div>
     )
 }

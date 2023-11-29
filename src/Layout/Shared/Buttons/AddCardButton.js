@@ -6,12 +6,12 @@ function AddCardButton({ deckId }) {
     const { url } = useRouteMatch();
 
     return (
-        <button type="button" name="create-card">
+        <button type="button" name="create-card" className="btn btn-primary" style={{ marginLeft: '10px'}}>
             {url === `/decks/${deckId}/study` ?
-                <Link to={`/decks/${deckId}/cards/new`}>
+                <Link style={{ color: '#FFF' }} to={`/decks/${deckId}/cards/new`}>
                     Add Card
                 </Link> :
-                <Link to={`${deckId}/cards/new`}>
+                <Link style={{ color: '#FFF' }} to={`${deckId}/cards/new`}>
                     Add Card
                 </Link>
             }
