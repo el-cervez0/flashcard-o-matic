@@ -48,7 +48,8 @@ function CardForm({ front = "", back = ""  }) {
             window.alert("Please fill out the entire form");
         } else if (!cardId) {
             createCard(deckId, { front: question, back: answer });
-            history.push(`/decks/${deckId}`)
+            setQuestion('');
+            setAnswer('');
         } else {
             updateCard({id: cardId, deckId: deck.id, front: question, back: answer })
             history.push(`/decks/${deckId}`)
