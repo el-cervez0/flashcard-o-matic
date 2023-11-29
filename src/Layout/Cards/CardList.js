@@ -16,21 +16,22 @@ const deckListStyle = {
     border: "solid",
     boxSizing: "content-box",
     borderRadius: "30px",
-    width: "100%",
+    width: "auto",
     margin: "10px"
 }
 
 function CardList({ deck }) {
     return (
         <div>
-            <h1>{deck.name}</h1>
-            <p>{deck.description}</p>
+            <div className="jumbotron">
+            <h1 className="display-4">{deck.name}</h1>
+            <p className="lead">{deck.description}</p>
             {/* Relace these buttons with the appropriate button bar */}
-            <EditDeckButton />
+            <EditDeckButton/>
             <StudyButton deckId={deck.id} />
-            <AddCardButton deckId={deck.id} />
-            <br />
-            <div style={{ padding: '10px', marginTop: '25px'}}>
+                <AddCardButton deckId={deck.id} />
+            </div>
+            <div>
             <h2>Cards</h2>
             <ul>
             {deck.cards.map((card) => (

@@ -27,7 +27,7 @@ function DeckList({ decks }) {
                 <div className="deck-info" style={deckListStyle}>    
                     <li key={index} style={deckBoxStyle}>
                             <h3>{deck.name}</h3>
-                            <small style={{ marginTop: '0px'}}>{deck.cards.length} cards</small>
+                            <span className="badge badge-pill badge-secondary">{deck.cards.length} cards</span>
                         <p style={{ marginTop: '15px', marginBottom: '25px'}}>{deck.description}</p>
                         <div className="deck-actions">
                             <button className="btn btn-primary">

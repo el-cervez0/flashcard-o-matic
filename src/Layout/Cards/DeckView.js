@@ -18,7 +18,10 @@ function DeckView() {
     if (deck.id) {
         return (
             <div>
-                <CardList deck={deck} />   
+                <CardList deck={deck} />
+                {deck.cards.length === 0 && 
+                    <h4 style={{ textAlign: "center" }}>Add some cards to start studying!</h4>
+                }
             </div>
         );
     }

@@ -44,8 +44,11 @@ function CardInfo({ cards }) {
     }
 
     return (
-        <div style={ cardBoxStyle }>
-            <h5>Card {cardIndex + 1} of {cards.length}</h5>
+        <div style={{ width: '100%' }} className="card">
+            <div className="card-header">
+                <h5>Card {cardIndex + 1} of {cards.length}</h5>
+            </div>
+            <div className="card-body">
             {!flipped ? 
                 <h5 className="card-text" style={ textStyle }>{studyCard.front}</h5> :
                 <h5 className="card-text" style={ textStyle }>{studyCard.back}</h5>
@@ -66,7 +69,8 @@ function CardInfo({ cards }) {
                     onClick={handleNext}>
                     Next
                 </button>
-            }
+                }
+            </div>
         </div>
     )
 }
