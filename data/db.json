@@ -57,6 +57,12 @@
       "back": "Hung high",
       "deckId": 3,
       "id": 13
+    },
+    {
+      "front": "Three cards",
+      "back": "ok",
+      "deckId": 1,
+      "id": 14
     }
   ]
 }

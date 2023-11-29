@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+/* Styles */
+
 const textStyle = {
-    margin: '10px',
+    margin: '15px',
     padding: '10px',
+    textAlign: 'center'
+}
+
+const cardBoxStyle = {
+    border: "solid",
+    boxSizing: "content-box",
+    borderRadius: "30px",
+    padding: "3%",
+    width: "100%",
 }
 
 function CardInfo({ cards }) {
@@ -12,6 +23,7 @@ function CardInfo({ cards }) {
     const [studyCard, setStudyCard] = useState(cards[cardIndex]);
 
     const history = useHistory();
+
 
     const handleNext = () => {
         if (cardIndex + 1 === cards.length) {
@@ -32,15 +44,16 @@ function CardInfo({ cards }) {
     }
 
     return (
-        <div className="card">
-            <h3 className="card-title">Card {cardIndex + 1} of {cards.length}</h3>
+        <div style={ cardBoxStyle }>
+            <h5>Card {cardIndex + 1} of {cards.length}</h5>
             {!flipped ? 
-                <p className="card-text" style={{ textStyle }}>{studyCard.front}</p> :
-                <p className="card-text" style={{ textStyle }}>{studyCard.back}</p>
+                <h5 className="card-text" style={ textStyle }>{studyCard.front}</h5> :
+                <h5 className="card-text" style={ textStyle }>{studyCard.back}</h5>
             }
             <button
                 type="button"
                 name="flip"
+                style={{ marginRight: '10px' }}
                 className="btn btn-secondary"
                 onClick={() => setFlipped(!flipped)}>
                 Flip
