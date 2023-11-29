@@ -4,17 +4,8 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 /* Styles */
 
 const textStyle = {
-    margin: '15px',
-    padding: '10px',
+    padding: '50px',
     textAlign: 'center'
-}
-
-const cardBoxStyle = {
-    border: "solid",
-    boxSizing: "content-box",
-    borderRadius: "30px",
-    padding: "3%",
-    width: "100%",
 }
 
 function CardInfo({ cards }) {
@@ -56,8 +47,8 @@ function CardInfo({ cards }) {
             <button
                 type="button"
                 name="flip"
-                style={{ marginRight: '10px' }}
-                className="btn btn-secondary"
+                style={{ marginTop: '10px' }}
+                className="btn btn-secondary btn-block"
                 onClick={() => setFlipped(!flipped)}>
                 Flip
             </button>
@@ -65,7 +56,7 @@ function CardInfo({ cards }) {
                 <button
                     type="button" 
                     name="next"
-                    className="btn btn-primary"
+                    className="btn btn-primary btn-block"
                     onClick={handleNext}>
                     Next
                 </button>

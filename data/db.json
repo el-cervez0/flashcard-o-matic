@@ -11,11 +11,6 @@
       "description": "React Router is a collection of navigational components that compose declaratively with your application."
     },
     {
-      "name": "CHristmas ROck",
-      "description": "Rockin around the christmas tree",
-      "id": 3
-    },
-    {
       "name": "Glenn Gomez",
       "description": "description",
       "id": 4
@@ -50,12 +45,6 @@
       "back": "Ok",
       "deckId": 1,
       "id": 12
-    },
-    {
-      "front": "Mistletoe",
-      "back": "Hung high",
-      "deckId": 3,
-      "id": 13
     },
     {
       "front": "Three cards",

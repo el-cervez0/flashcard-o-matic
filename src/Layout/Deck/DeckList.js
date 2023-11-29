@@ -26,8 +26,8 @@ function DeckList({ decks }) {
             {decks.map((deck, index) => (
                 <div className="deck-info" style={deckListStyle}>    
                     <li key={index} style={deckBoxStyle}>
-                            <h3>{deck.name}</h3>
-                            <span className="badge badge-pill badge-secondary">{deck.cards.length} cards</span>
+                        <h3>{deck.name}</h3>
+                        <span className="badge badge-pill badge-secondary">{deck.cards.length} cards</span>
                         <p style={{ marginTop: '15px', marginBottom: '25px'}}>{deck.description}</p>
                         <div className="deck-actions">
                             <button className="btn btn-primary">
@@ -39,7 +39,7 @@ function DeckList({ decks }) {
                     </li>
                 </div>
             ))}
-            </ul>
+        </ul>
         </div>
     )
 }

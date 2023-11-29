@@ -24,17 +24,17 @@ function CardList({ deck }) {
     return (
         <div>
             <div className="jumbotron">
-            <h1 className="display-4">{deck.name}</h1>
-            <p className="lead">{deck.description}</p>
-            {/* Relace these buttons with the appropriate button bar */}
-            <EditDeckButton/>
-            <StudyButton deckId={deck.id} />
+                <h1 className="display-4">{deck.name}</h1>
+                <p className="lead">{deck.description}</p>
+                {/* Relace these buttons with the appropriate button bar */}
+                <EditDeckButton/>
+                <StudyButton deckId={deck.id} />
                 <AddCardButton deckId={deck.id} />
             </div>
             <div>
-            <h2>Cards</h2>
-            <ul>
-            {deck.cards.map((card) => (
+                <h2>Cards</h2>
+                <ul>
+                {deck.cards.map((card) => (
                 <div style={deckListStyle}>
                     <li key={card.id} style={deckBoxStyle}>
                         <p><strong>Question: </strong>{card.front}</p>
@@ -43,8 +43,8 @@ function CardList({ deck }) {
                         <DeleteCardButton cardId={card.id} deckId={deck.id} />
                     </li>
                 </div>
-            ))}
-            </ul>
+                ))}
+                </ul>
             </div>
         </div>
     )
